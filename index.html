@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>School Map </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=ZRxZnRD2gJ3SuX8ePkTDE9XD3Wja7vH2"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="control-panel">
+        <button id="toggle-panel" style="position:absolute;top:10px;right:10px;">☰</button>
+        <div class="panel-section">
+            <label>选择起始点</label>
+            <select id="start-point">
+                <option value="" disabled selected hidden style="color: #aaa;">请选择地点</option>
+                <option value="a">A楼</option>
+                <option value="b">B楼</option>
+                <option value="c">C楼</option>
+                <option value="d">D楼</option>
+                <option value="e">E楼</option>
+                <option value="f">F楼</option>
+                <option value="g">G楼</option>
+                <option value="h">H楼</option>
+                <option value="aj">Aj楼</option>
+                <option value="bj">Bj楼</option>
+                <option value="cj">Cj楼</option>
+                <option value="dj">Dj楼</option>
+                <option value="ej">Ej楼</option>
+                <option value="fj">Fj楼</option>
+                <option value="gj">Gj楼</option>
+                <option value="t">图书馆</option>
+                <option value="s1">益兴食堂</option>
+                <option value="s2">尔美食堂</option>
+                <option value="s3">山明食堂</option>
+                <option value="s4">水秀食堂</option>
+                <option value="d1">东区2门</option>
+                <option value="d2">东区大门</option>
+                <option value="x1">新世纪天桥</option>
+                <option value="x2">西大门</option>
+                <option value="n1">南区2门</option>
+                <option value="n2">南区大门</option>
+                <option value="b1">北大门</option>
+                <option value="c1">跑步操场</option>
+                <option value="c2">风雨操场</option>
+                <option value="ss1">校内宿舍区1</option>
+                <option value="ss2">校内宿舍区2</option>
+                <option value="j">J楼</option>
+                <option value="m">美院</option>
+                <option value="z">行政楼</option>
+                <option value="y">校医院</option>
+            </select>
+        </div>
+        <div class="panel-section">
+            <label>选择途径点（默认无）</label>
+            <select id="waypoint">
+                <option>无</option>
+                <option value="a">A楼</option>
+                <option value="b">B楼</option>
+                <option value="c">C楼</option>
+                <option value="d">D楼</option>
+                <option value="e">E楼</option>
+                <option value="f">F楼</option>
+                <option value="g">G楼</option>
+                <option value="h">H楼</option>
+                <option value="aj">Aj楼</option>
+                <option value="bj">Bj楼</option>
+                <option value="cj">Cj楼</option>
+                <option value="dj">Dj楼</option>
+                <option value="ej">Ej楼</option>
+                <option value="fj">Fj楼</option>
+                <option value="gj">Gj楼</option>
+                <option value="t">图书馆</option>
+                <option value="s1">益兴食堂</option>
+                <option value="s2">尔美食堂</option>
+                <option value="s3">山明食堂</option>
+                <option value="s4">水秀食堂</option>
+                <option value="d1">东区2门</option>
+                <option value="d2">东区大门</option>
+                <option value="x1">新世纪天桥</option>
+                <option value="x2">西大门</option>
+                <option value="n1">南区2门</option>
+                <option value="n2">南区大门</option>
+                <option value="b1">北大门</option>
+                <option value="c1">跑步操场</option>
+                <option value="c2">风雨操场</option>
+                <option value="ss1">校内宿舍区1</option>
+                <option value="ss2">校内宿舍区2</option>
+                <option value="j">J楼</option>
+                <option value="m">美院</option>
+                <option value="z">行政楼</option>
+                <option value="y">校医院</option>
+            </select>
+        </div>
+        <div class="panel-section">
+            <label>选择最终点</label>
+            <select id="end-point">
+                <option value="" disabled selected hidden style="color: #aaa;">请选择地点</option>
+                <option value="a">A楼</option>
+                <option value="b">B楼</option>
+                <option value="c">C楼</option>
+                <option value="d">D楼</option>
+                <option value="e">E楼</option>
+                <option value="f">F楼</option>
+                <option value="g">G楼</option>
+                <option value="h">H楼</option>
+                <option value="aj">Aj楼</option>
+                <option value="bj">Bj楼</option>
+                <option value="cj">Cj楼</option>
+                <option value="dj">Dj楼</option>
+                <option value="ej">Ej楼</option>
+                <option value="fj">Fj楼</option>
+                <option value="gj">Gj楼</option>
+                <option value="t">图书馆</option>
+                <option value="s1">益兴食堂</option>
+                <option value="s2">尔美食堂</option>
+                <option value="s3">山明食堂</option>
+                <option value="s4">水秀食堂</option>
+                <option value="d1">东区2门</option>
+                <option value="d2">东区大门</option>
+                <option value="x1">新世纪天桥</option>
+                <option value="x2">西大门</option>
+                <option value="n1">南区2门</option>
+                <option value="n2">南区大门</option>
+                <option value="b1">北大门</option>
+                <option value="c1">跑步操场</option>
+                <option value="c2">风雨操场</option>
+                <option value="ss1">校内宿舍区1</option>
+                <option value="ss2">校内宿舍区2</option>
+                <option value="j">J楼</option>
+                <option value="m">美院</option>
+                <option value="z">行政楼</option>
+                <option value="y">校医院</option>
+            </select>
+        </div>
+        <div class="panel-buttons">
+            <button id="btn-navigate">导航</button>
+            <button id="btn-reset">重置</button>
+        </div>
+        <div class="panel-traffic">
+            <button id="bike">骑行</button>
+            <button id="walk">步行</button>
+        </div>
+        <div class="panel-timecost">
+            <p id="timecost">预计用时：</p>
+            <p id="milecost">预计距离：</p>
+        </div>
+    </div>
+
+    <script src="map.js"></script>
+</body>
+</html>

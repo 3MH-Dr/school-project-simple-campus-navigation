@@ -1,0 +1,118 @@
+html{height:100%}
+        body{height:100%;margin:0px;padding:0px}
+        #container{height:100%}
+                #control-panel {
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            width: 280px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-family: "Microsoft Yahei", sans-serif;
+            pointer-events: auto;
+            z-index: 999;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        #control-panel.collapsed {
+            width: 50px;   /* 收缩宽度 */
+            height: 50px;  /* 可选，收缩高度 */
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        #toggle-panel {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .panel-section {
+            margin-bottom: 15px;
+        }
+
+        .panel-section label {
+            display: block;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .panel-section select {
+            width: 100%;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .panel-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .panel-buttons button {
+            width: 48%;
+            padding: 8px 0;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .panel-traffic{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        }
+
+        .panel-traffic button {
+        width: 48%;
+        padding: 8px 0;
+        font-size: 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        }
+
+        #btn-navigate {
+            background-color: #409EFF;
+            color: white;
+        }
+
+        #btn-reset {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        #btn-navigate:hover {
+            background-color: #3080e0;
+        }
+
+        #btn-reset:hover {
+            background-color: #cfcfcf;
+        }
+
+        #bike {
+            background-color: #409EFF;
+            color: white;
+        }
+
+        #walk {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        #bike:hover {
+            background-color: #3080e0;
+        }
+
+        #walk:hover {
+            background-color: #3080e0;
+        }
