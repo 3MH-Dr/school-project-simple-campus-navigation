@@ -18,6 +18,7 @@ JSON 数据通信
 
 # 克隆项目
 git clone https://github.com/3MH-Dr/school-project-simple-campus-navigation.git
+
 cd school-project-simple-campus-navigation
 
 # 安装依赖
