@@ -11,7 +11,7 @@ Fetch 实现前后端数据通信
 自适应布局，支持桌面端与移动端显示
 
 后端：
-Python 3.x
+Python 3.10
 Flask 轻量级框架
 JSON 数据通信
 路径规划算法模块（可扩展为Dijkstra、A*等）
@@ -22,3 +22,6 @@ cd school-project-simple-campus-navigation
 
 # 安装依赖
 pip install -r requirements.txt
+将index文件中的密匙替换为个人百度api密匙
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=您的密钥"></script>
+
