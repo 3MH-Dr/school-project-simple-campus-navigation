@@ -23,6 +23,8 @@ cd school-project-simple-campus-navigation
 
 # 安装依赖
 pip install -r requirements.txt
+
 将index文件中的密匙替换为个人百度api密匙
+
   <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=您的密钥"></script>
 
